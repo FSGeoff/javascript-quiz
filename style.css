@@ -15,3 +15,17 @@
 	position: block;
 	margin: auto;
 }
+
+#start-quiz-btn {
+	position: block;
+	margin: auto;
+}
+
+#start-btn {
+	position: block;
+	margin: auto;
+}
+
+#start {
+	background-color: blueviolet;
+}
