@@ -18,20 +18,28 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="script.js"></script>
-		<link src="style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
 		<div class="row">
 			<div class="col-md-6">
-				<p class="text-sm-left">View High Scores V</p>
+				<!-- Score Keeper -->
+				<p class="text-sm-left">
+					View High Scores<span id="highScores">____</span>
+				</p>
 			</div>
 			<div class="col-md-6">
-				<p class="text-sm-right">Timer</p>
+				<!-- Timer  -->
+				<p class="text-sm-right">
+					Timer<span id="countDown">____</span>
+				</p>
 			</div>
 		</div>
+		<div id="spacer"></div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="text-sm-center">
+					<!-- Test Title Header  -->
 					<h1 class="header" id="page-title">
 						Coding Quiz Challenge
 					</h1>
