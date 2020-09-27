@@ -21,11 +21,11 @@
 	margin: auto;
 }
 
-#start-btn {
+#start {
 	position: block;
 	margin: auto;
 }
 
-#start {
+#start-btn {
 	background-color: blueviolet;
 }
