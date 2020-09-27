@@ -28,4 +28,6 @@
 
 #start-btn {
 	background-color: blueviolet;
+	position: block;
+	margin: auto;
 }
