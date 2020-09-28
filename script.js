@@ -49,7 +49,7 @@ function quizQuestion1() {
 
 	for (let i = 0; i <= question1Answers.length; i++) {
 		var testButtons = document.createElement("button");
-		// testButtons.setAttribute("class", "btn-group-vertical");
+
 		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
 		testButtons.textContent = question1Answers[i];
@@ -66,8 +66,8 @@ function quizQuestion1() {
 				count = count - 10;
 			}
 			setTimeout(function () {
-				question1.remove();
-				testButtons.remove();
+				testBox.textContent = "";
+				testButtons.textContent = "";
 				quizQuestion2();
 			}, 1000);
 		});
@@ -104,7 +104,9 @@ function quizQuestion2() {
 				count = count - 10;
 			}
 			setTimeout(function () {
-				(testBox.style.display = "none"), quizQuestion3();
+				question2.remove();
+				testButtons.remove();
+				quizQuestion3();
 			}, 1000);
 		});
 	}
