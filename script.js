@@ -76,17 +76,18 @@ function quizQuestion1() {
 
 function quizQuestion2() {
 	var question2Answers = [
-		"1. numbers and strings",
-		"2. other arrays",
-		"4. all of the above",
-		"3. booleans",
+		"1. Javascript",
+		"2. terminal/bash",
+		"4. for loops",
+		"3. console.log",
 	];
 	var question2 = document.createElement("h4");
-	question2.textContent = "Arrays in Javascript can be used to store _____";
+	question2.textContent =
+		"A very useful tool used during development and debugging for printing content to the debugger is: ";
 	testBox.appendChild(question2);
 	for (let i = 0; i <= question2Answers.length; i++) {
 		var testButtons = document.createElement("button");
-		testButtons.setAttribute("class", "btn-group-vertical");
+
 		testButtons.setAttribute("data-value", question2Answers[i]);
 		testButtons.style.margin = "2px";
 		testButtons.textContent = question2Answers[i];
@@ -104,8 +105,8 @@ function quizQuestion2() {
 				count = count - 10;
 			}
 			setTimeout(function () {
-				question2.remove();
-				testButtons.remove();
+				testBox.textContent = "";
+				testButtons.textContent = "";
 				quizQuestion3();
 			}, 1000);
 		});
@@ -113,25 +114,27 @@ function quizQuestion2() {
 }
 
 function quizQuestion3() {
+	console.log("3 is here");
 	var question3Answers = [
 		"1. numbers and strings",
 		"2. other arrays",
 		"3. booleans",
 		"4. all of the above",
 	];
+	var question3 = document.createElement("h4");
+	question3.textContent = "Arrays in Javascript can be used to store _____?";
+	testButtons.appendChild(question3);
 
 	for (let i = 0; i <= question3Answers.length; i++) {
 		var testButtons = document.createElement("button");
-		testButtons.setAttribute("class", "btn-group-vertical");
+
 		testButtons.setAttribute("data-value", question3Answers[i]);
 		testButtons.style.margin = "2px";
 		testButtons.textContent = question3Answers[i];
 		testAnswers.append(testButtons);
 	}
-	var question3 = document.createElement("h4");
-	question3.textContent = "Arrays in Javascript can be used to store _____?";
-	testButtons.appendChild(question3);
-	testAnswers.addEventListener("click", function (event) {
+
+	testButtons.addEventListener("click", function (event) {
 		if (event.target.matches("button")) {
 			var answerSelected = event.target.getAttribute("data-value");
 			finalResults.push(answerSelected);
@@ -143,7 +146,9 @@ function quizQuestion3() {
 			count = count - 10;
 		}
 		setTimeout(function () {
-			(testBox.style.display = "none"), quizQuestion4();
+			testBox.textContent = "";
+			testButtons.textContent = "";
+			quizQuestion4();
 		}, 1000);
 	});
 }

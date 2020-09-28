@@ -39,3 +39,12 @@
 #high-scores {
 	display: none;
 }
+
+#test-box {
+	position: block;
+	margin: auto;
+}
+#answer-message {
+	position: block;
+	margin: auto;
+}
