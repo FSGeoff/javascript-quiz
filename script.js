@@ -1,36 +1,112 @@
 var scoreKeeper = document.getElementById("highScores");
 var timeKeeper = document.getElementById("countDown");
 var startButton = document.getElementById("start-btn");
+var testBox = document.getElementById("test-box");
+var firstPage = document.getElementById("home-page");
+var testAnswers = document.getElementById("test-answers");
 
-var quizQuestions = [
-	{
-		question: "Commonly used data types DO NOT include:",
-		answers: ["strings", "booleans", "alert", "numbers"],
-	},
-	{
-		question:
-			"The condition in an if/else statement is enclosed within _______.",
-		answers: ["quotes", "curly brackets", "parenthesis", "square brackets"],
-	},
-	{
-		question: "Arrays in JavaScript can be used to store _____.",
-		answers: [
-			"numbers and strings",
-			"other arrays",
-			"booleans",
-			"all of the above",
-		],
-	},
-	{
-		question:
-			"String values must be enclosed within ______ when being assigned to variables",
-		answers: ["commas", "curly brackets", "quotes", "parenthesis"],
-	},
-];
+startButton.addEventListener("click", function () {
+	firstPage.style.display = "none";
+	timer();
+	quizQuestion1();
+});
+
+function timer() {
+	setInterval(function () {
+		function countDown() {
+			count = 75;
+			for (let i = count; i > 0; i--) {
+				count--;
+				return count;
+			}
+		}
+	}, 1000);
+}
+
+function quizQuestion1() {
+	var question1Answers = [
+		"1. strings",
+		"2. booleans",
+		"3. alert",
+		"4. numbers",
+	];
+
+	for (let i = 0; i <= question1Answers.length; i++) {
+		var testButtons = document.createElement("button");
+		testButtons.setAttribute("class", "btn btn-primary");
+		testButtons.style.margin = "2px";
+		testButtons.textContent = question1Answers[i];
+		testAnswers.append(testButtons);
+	}
+	var question1 = document.createElement("h4");
+	question1.textContent = "Commonly used data types DO NOT include:";
+	testButtons.appendChild(question1);
+}
+// var jsQuiz = [
+// 	{
+// 		question: "Commonly used data types DO NOT include:",
+// 		answers: ["1. strings", "2. booleans", "3. alert", "4. numbers"],
+// 	},
+// 	{
+// 		question:
+// 			"The condition in an if/else statement is enclosed within _______.",
+// 		answers: [
+// 			"1. quotes",
+// 			"2. curly brackets",
+// 			"3. parenthesis",
+// 			"4. square brackets",
+// 		],
+// 	},
+// 	{
+// 		question: "Arrays in JavaScript can be used to store _____.",
+// 		answers: [
+// 			"1. numbers and strings",
+// 			"2. other arrays",
+// 			"3. booleans",
+// 			"4. all of the above",
+// 		],
+// 	},
+// 	{
+// 		question:
+// 			"String values must be enclosed within ______ when being assigned to variables",
+// 		answers: [
+// 			"1. commas",
+// 			"2. curly brackets",
+// 			"3. quotes",
+// 			"4. parenthesis",
+// 		],
+// 	},
+// ];
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
+
+// startButton.addEventListener("click", function () {
+// 	console.log("help me");
+// if (event.target.matches("button")) {
+// 	setInterval(function () {
+// 		var counter = 75;
+// 		for (let i = counter; i > 0; i--) {
+// 			counter--;
+// 		}
+// 		return counter;
+// 		console.log(counter);
+// 	}, 1000);
+// }
+// beginJsQuiz();
+// });
+
 // THEN a timer starts and I am presented with a question
+// function beginJsQuiz(jsQuiz) {
+// 	for (let i = 0; i <= jsQuiz.length; i++) {
+// 		var answerButton = document.createElement("button");
+// 		answerButton.setAttribute = ("class", "btn btn-primary");
+// 		answerButton.setAttribute("data-value", jsQuiz[i]);
+// 		answerButton.textContent = jsQuiz[i];
+// 		answers.append(answerButton);
+// 	}
+// }
+
 // WHEN I answer a question
 // THEN I am presented with another question
 // WHEN I answer a question incorrectly
