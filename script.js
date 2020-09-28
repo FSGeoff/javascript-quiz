@@ -4,21 +4,25 @@ var startButton = document.getElementById("start-btn");
 var testBox = document.getElementById("test-box");
 var firstPage = document.getElementById("home-page");
 var testAnswers = document.getElementById("test-answers");
+var answerMessage = document.getElementById("answer-message");
+
+var finalResults = [];
+var count = 75;
 
 startButton.addEventListener("click", function () {
 	firstPage.style.display = "none";
 	timer();
-	quizQuestion1();
 });
 
 function timer() {
+	quizQuestion1();
 	setInterval(function () {
 		function countDown() {
-			count = 75;
 			for (let i = count; i > 0; i--) {
 				count--;
-				return count;
 			}
+			return count;
+			console.log(count);
 		}
 	}, 1000);
 }
@@ -45,8 +49,15 @@ function quizQuestion1() {
 	testAnswers.addEventListener("click", function (event) {
 		if (event.target.matches("button")) {
 			var answerSelected = event.target.getAttribute("data-value");
-			console.log(answerSelected);
+			finalResults.push(answerSelected);
 		}
+		if (answerSelected === question1Answers[2]) {
+			answerMessage.innerHTML = "CORRECT!";
+		} else {
+			answerMessage.innerHTML = "WRONG!";
+			count = count - 10;
+		}
+		console.log(finalResults);
 	});
 }
 // var jsQuiz = [
