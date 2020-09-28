@@ -52,6 +52,8 @@ function quizQuestion1() {
 
 		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
+		testButtons.style.backgroundColor = "purple";
+		testButtons.style.color = "white";
 		testButtons.textContent = question1Answers[i];
 		testBox.append(testButtons);
 		testButtons.addEventListener("click", function (event) {
@@ -90,6 +92,8 @@ function quizQuestion2() {
 
 		testButtons.setAttribute("data-value", question2Answers[i]);
 		testButtons.style.margin = "2px";
+		testButtons.style.backgroundColor = "purple";
+		testButtons.style.color = "white";
 		testButtons.textContent = question2Answers[i];
 		testBox.append(testButtons);
 
@@ -130,6 +134,8 @@ function quizQuestion3() {
 
 		testButtons.setAttribute("data-value", question3Answers[i]);
 		testButtons.style.margin = "2px";
+		testButtons.style.backgroundColor = "purple";
+		testButtons.style.color = "white";
 		testButtons.textContent = question3Answers[i];
 		testAnswers.append(testButtons);
 	}
