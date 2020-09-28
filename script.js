@@ -34,6 +34,7 @@ function quizQuestion1() {
 	for (let i = 0; i <= question1Answers.length; i++) {
 		var testButtons = document.createElement("button");
 		testButtons.setAttribute("class", "btn-group-vertical");
+		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
 		testButtons.textContent = question1Answers[i];
 		testAnswers.append(testButtons);
@@ -41,6 +42,12 @@ function quizQuestion1() {
 	var question1 = document.createElement("h4");
 	question1.textContent = "Commonly used data types DO NOT include:";
 	testButtons.appendChild(question1);
+	testAnswers.addEventListener("click", function (event) {
+		if (event.target.matches("button")) {
+			var answerSelected = event.target.getAttribute("data-value");
+			console.log(answerSelected);
+		}
+	});
 }
 // var jsQuiz = [
 // 	{
@@ -81,31 +88,8 @@ function quizQuestion1() {
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 
-// startButton.addEventListener("click", function () {
-// 	console.log("help me");
-// if (event.target.matches("button")) {
-// 	setInterval(function () {
-// 		var counter = 75;
-// 		for (let i = counter; i > 0; i--) {
-// 			counter--;
-// 		}
-// 		return counter;
-// 		console.log(counter);
-// 	}, 1000);
-// }
-// beginJsQuiz();
-// });
-
 // THEN a timer starts and I am presented with a question
-// function beginJsQuiz(jsQuiz) {
-// 	for (let i = 0; i <= jsQuiz.length; i++) {
-// 		var answerButton = document.createElement("button");
-// 		answerButton.setAttribute = ("class", "btn btn-primary");
-// 		answerButton.setAttribute("data-value", jsQuiz[i]);
-// 		answerButton.textContent = jsQuiz[i];
-// 		answers.append(answerButton);
-// 	}
-// }
+//
 
 // WHEN I answer a question
 // THEN I am presented with another question
