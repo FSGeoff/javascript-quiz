@@ -33,7 +33,7 @@ function quizQuestion1() {
 
 	for (let i = 0; i <= question1Answers.length; i++) {
 		var testButtons = document.createElement("button");
-		testButtons.setAttribute("class", "btn btn-primary");
+		testButtons.setAttribute("class", "btn-group-vertical");
 		testButtons.style.margin = "2px";
 		testButtons.textContent = question1Answers[i];
 		testAnswers.append(testButtons);
