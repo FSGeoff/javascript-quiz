@@ -8,6 +8,12 @@ var answerMessage = document.getElementById("answer-message");
 
 var finalResults = [];
 var count = 75;
+var rightAnswers = [
+	"3. alert",
+	"2. curly brackets",
+	"4. all of the above",
+	"3. quotes",
+];
 
 startButton.addEventListener("click", function () {
 	firstPage.style.display = "none";
@@ -20,9 +26,9 @@ function timer() {
 		function countDown() {
 			for (let i = count; i > 0; i--) {
 				count--;
+				return count;
+				console.log(count);
 			}
-			return count;
-			console.log(count);
 		}
 	}, 1000);
 }
@@ -64,7 +70,30 @@ function quizQuestion1() {
 }
 
 function quizQuestion2() {
-	console.log("You rang!");
+	var question2Answers = [
+		"1. numbers and strings",
+		"2. other arrays",
+		"3. booleans",
+		"4. all of the above",
+	];
+}
+
+function quizQuestion3() {
+	var question3Answers = [
+		"1. numbers and strings",
+		"2. other arrays",
+		"3. booleans",
+		"4. all of the above",
+	];
+}
+
+function quizQuestion4() {
+	var question4Answers = [
+		"1. commas",
+		"2. curly brackets",
+		"3. quotes",
+		"4. parenthesis",
+	];
 }
 // var jsQuiz = [
 // 	{
