@@ -14,7 +14,7 @@ var count = 75;
 var timeInterval;
 var rightAnswers = [
 	"3. alert",
-	"2. curly brackets",
+	"2. console.log",
 	"4. all of the above",
 	"3. quotes",
 ];
@@ -118,7 +118,6 @@ function quizQuestion2() {
 }
 
 function quizQuestion3() {
-	console.log("3 is here");
 	var question3Answers = [
 		"1. numbers and strings",
 		"2. other arrays",
@@ -127,7 +126,7 @@ function quizQuestion3() {
 	];
 	var question3 = document.createElement("h4");
 	question3.textContent = "Arrays in Javascript can be used to store _____?";
-	testButtons.appendChild(question3);
+	testBox.appendChild(question3);
 
 	for (let i = 0; i <= question3Answers.length; i++) {
 		var testButtons = document.createElement("button");
@@ -137,7 +136,7 @@ function quizQuestion3() {
 		testButtons.style.backgroundColor = "purple";
 		testButtons.style.color = "white";
 		testButtons.textContent = question3Answers[i];
-		testAnswers.append(testButtons);
+		testBox.append(testButtons);
 	}
 
 	testButtons.addEventListener("click", function (event) {
@@ -166,6 +165,7 @@ function quizQuestion4() {
 		"3. quotes",
 		"4. parenthesis",
 	];
+	for (let i = 0; i <= quizQuestion4.length; i++) {}
 }
 
 // GIVEN I am taking a code quiz
