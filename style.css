@@ -31,3 +31,11 @@
 	position: block;
 	margin: auto;
 }
+
+#resultsBox {
+	display: none;
+}
+
+#high-scores {
+	display: none;
+}

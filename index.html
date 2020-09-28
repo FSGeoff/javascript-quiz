@@ -18,12 +18,14 @@
 		<div class="row">
 			<div class="col-md-6">
 				<!-- Score Keeper -->
-				<a class="text-sm-left" href="#">View High Scores</a>
+				<a class="text-sm-left" id="score-keep" href="#"
+					>View High Scores</a
+				>
 			</div>
 			<div class="col-md-6">
 				<!-- Timer  -->
 				<p class="text-sm-right">
-					Timer<span id="countDown">____</span>
+					Timer<span id="count-down">75</span>
 				</p>
 			</div>
 		</div>
@@ -64,14 +66,35 @@
 			</div>
 		</div>
 
-		<div class="container" id="test-box">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-5 text-center" id="">
+				<div
+					class="col-md-5 text-center btn-group-vertical"
+					id="test-box"
+				>
 					<div class="btn-group-vertical" id="test-answers"></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-sm txt-center" id="answer-message"></div>
+			</div>
+		</div>
+
+		<div class="container" id="resultsBox">
+			<div class="row">
+				<div class="col-md-5 txt-center">
+					<p>Your final score is <span id="final-score"></span></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="high-scores">
+			<div class="row">
+				<div class="col-md-5 txt-center">
+					<h1>Highscores</h1>
+					<button id="go-back">Go Back</button>
+					<button id="clear-scores">Clear Highscores</button>
+				</div>
 			</div>
 		</div>
 		<script
