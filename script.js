@@ -165,7 +165,25 @@ function quizQuestion4() {
 		"3. quotes",
 		"4. parenthesis",
 	];
-	for (let i = 0; i <= quizQuestion4.length; i++) {}
+
+	var question4 = document.createElement("h4");
+	question4.textContent =
+		"String values must be enclosed with _____ when being assigned to variables.";
+    testBox.append(question4);
+
+        for (let i = 0; i <= quizQuestion4.length; i++) {
+            var testButtons = document.createElement("button");
+        
+            testButtons.setAttribute("data-value", question4Answers[i]);
+            testButtons.style.margin = "2px";
+            testButtons.style.backgroundColor = "purple";
+            testButtons.style.color = "white";
+            testButtons.textContent = question4Answers[i];
+            testBox.append(testButtons);
+            testButtons.addEventListener("click", function (event) {
+                if (event.target.matches("button"))
+            })
+        }
 }
 
 // GIVEN I am taking a code quiz
