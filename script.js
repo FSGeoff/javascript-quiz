@@ -57,8 +57,14 @@ function quizQuestion1() {
 			answerMessage.innerHTML = "WRONG!";
 			count = count - 10;
 		}
-		console.log(finalResults);
+		setTimeout(function () {
+			(testBox.style.display = "none"), quizQuestion2();
+		}, 1000);
 	});
+}
+
+function quizQuestion2() {
+	console.log("You rang!");
 }
 // var jsQuiz = [
 // 	{
