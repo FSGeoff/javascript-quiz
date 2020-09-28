@@ -70,6 +70,7 @@ function quizQuestion1() {
 			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
+				answerSelected.innerHTML = "";
 				quizQuestion2();
 			}, 1000);
 		});
@@ -111,6 +112,7 @@ function quizQuestion2() {
 			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
+				answerSelected.innerHTML = "";
 				quizQuestion3();
 			}, 1000);
 		});
@@ -152,6 +154,7 @@ function quizQuestion3() {
 			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
+				answerSelected.innerHTML = "";
 				quizQuestion4();
 			}, 1000);
 		});
@@ -195,6 +198,7 @@ function quizQuestion4() {
 			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
+				finalScore.style.display = "block";
 			}, 1000);
 		});
 	}
