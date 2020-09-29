@@ -229,11 +229,9 @@ function yourScore() {
 		score++;
 	}
 	finalScore.textContent = score;
-}
 
-// function finalResultsScreen() {
-// 	finalResultsBox.style.display = "block";
-// 	finalResultsBox.style.margin = "auto";
+	submitButton.addEventListener("click", function () {});
+}
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
