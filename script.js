@@ -47,7 +47,7 @@ function quizQuestion1() {
 	question1.textContent = "Commonly used data types DO NOT include:";
 	testBox.append(question1);
 
-	for (let i = 0; i <= question1Answers.length; i++) {
+	for (let i = 0; i < question1Answers.length; i++) {
 		var testButtons = document.createElement("button");
 
 		testButtons.setAttribute("data-value", question1Answers[i]);
@@ -88,7 +88,7 @@ function quizQuestion2() {
 	question2.textContent =
 		"A very useful tool used during development and debugging for printing content to the debugger is: ";
 	testBox.appendChild(question2);
-	for (let i = 0; i <= question2Answers.length; i++) {
+	for (let i = 0; i < question2Answers.length; i++) {
 		var testButtons = document.createElement("button");
 
 		testButtons.setAttribute("data-value", question2Answers[i]);
@@ -130,7 +130,7 @@ function quizQuestion3() {
 	question3.textContent = "Arrays in Javascript can be used to store _____?";
 	testBox.appendChild(question3);
 
-	for (let i = 0; i <= question3Answers.length; i++) {
+	for (let i = 0; i < question3Answers.length; i++) {
 		var testButtons = document.createElement("button");
 
 		testButtons.setAttribute("data-value", question3Answers[i]);
@@ -175,7 +175,7 @@ function quizQuestion4() {
 		"String values must be enclosed with _____ when being assigned to variables.";
 	testBox.append(question4);
 
-	for (let i = 0; i <= question4Answers.length; i++) {
+	for (let i = 0; i < question4Answers.length; i++) {
 		var testButtons = document.createElement("button");
 
 		testButtons.setAttribute("data-value", question4Answers[i]);
@@ -189,17 +189,19 @@ function quizQuestion4() {
 				var answerSelected = event.target.getAttribute("data-value");
 				finalResults.push(answerSelected);
 			}
-			if (answerSelected === question1Answers[2]) {
+			if (answerSelected === question4Answers[2]) {
 				answerMessage.innerHTML = "CORRECT!";
-			} else {
-				answerMessage.innerHTML === "WRONG!";
-				count = count - 10;
-			}
-			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
 				finalScore.style.display = "block";
-			}, 1000);
+				timeKeeper.style.display = "none";
+			} else {
+				answerMessage.innerHTML === "WRONG!";
+				testBox.textContent = "";
+				testButtons.textContent = "";
+				finalScore.style.display = "block";
+				timeKeeper.style.display = "none";
+			}
 		});
 	}
 }
