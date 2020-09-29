@@ -195,18 +195,19 @@ function quizQuestion4() {
 			if (answerSelected === question4Answers[2]) {
 				answerMessage.innerHTML = "CORRECT!";
 			} else {
-				answerMessage.innerHTML === "WRONG!";
+				answerMessage.innerHTML = "WRONG!";
 			}
 			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
 				answerSelected.innerHTML = "";
 				answerMessage.innerHTML = "";
-				quizQuestion4();
+				timeKeeper.style.display = "none";
 			}, 1000);
 		});
 	}
 }
+console.log(finalResults);
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
