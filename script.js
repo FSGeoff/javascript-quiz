@@ -71,6 +71,7 @@ function quizQuestion1() {
 				testBox.textContent = "";
 				testButtons.textContent = "";
 				answerSelected.innerHTML = "";
+				answerMessage.innerHTML = "";
 				quizQuestion2();
 			}, 1000);
 		});
@@ -113,6 +114,7 @@ function quizQuestion2() {
 				testBox.textContent = "";
 				testButtons.textContent = "";
 				answerSelected.innerHTML = "";
+				answerMessage.innerHTML = "";
 				quizQuestion3();
 			}, 1000);
 		});
@@ -155,6 +157,7 @@ function quizQuestion3() {
 				testBox.textContent = "";
 				testButtons.textContent = "";
 				answerSelected.innerHTML = "";
+				answerMessage.innerHTML = "";
 				quizQuestion4();
 			}, 1000);
 		});
@@ -191,17 +194,16 @@ function quizQuestion4() {
 			}
 			if (answerSelected === question4Answers[2]) {
 				answerMessage.innerHTML = "CORRECT!";
-				testBox.textContent = "";
-				testButtons.textContent = "";
-				finalScore.style.display = "block";
-				timeKeeper.style.display = "none";
 			} else {
 				answerMessage.innerHTML === "WRONG!";
+			}
+			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
-				finalScore.style.display = "block";
-				timeKeeper.style.display = "none";
-			}
+				answerSelected.innerHTML = "";
+				answerMessage.innerHTML = "";
+				quizQuestion4();
+			}, 1000);
 		});
 	}
 }
