@@ -52,3 +52,7 @@
 .results {
 	display: none;
 }
+
+#submit-btn {
+	background-color: #c549c5;
+}
