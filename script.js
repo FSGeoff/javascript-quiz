@@ -10,13 +10,14 @@ var goBackButton = document.getElementById("go-back");
 var clearScoresButton = document.getElementById("clear-scores");
 var finalResultsBox = document.getElementById("results-box");
 var initialsInput = document.getElementById("initials-input");
+var submitButton = document.getElementById("submit-btn");
 
 var finalResults = [];
 var count = 75;
 var timeInterval;
 var rightAnswers = [
 	"3. alert",
-	"2. console.log",
+	"4. console.log",
 	"4. all of the above",
 	"3. quotes",
 ];
@@ -84,8 +85,8 @@ function quizQuestion2() {
 	var question2Answers = [
 		"1. Javascript",
 		"2. terminal/bash",
-		"4. for loops",
-		"3. console.log",
+		"3. for loops",
+		"4. console.log",
 	];
 	var question2 = document.createElement("h4");
 	question2.textContent =
@@ -207,9 +208,27 @@ function quizQuestion4() {
 				timeKeeper.style.display = "none";
 				finalResultsBox.style.display = "block";
 				finalResultsBox.style.margin = "auto";
+				yourScore();
 			}, 1000);
 		});
 	}
+}
+
+function yourScore() {
+	var score = 0;
+	if (finalResults[0] === rightAnswers[0]) {
+		score++;
+	}
+	if (finalResults[1] === rightAnswers[1]) {
+		score++;
+	}
+	if (finalResults[2] === rightAnswers[2]) {
+		score++;
+	}
+	if (finalResults[3] === rightAnswers[3]) {
+		score++;
+	}
+	finalScore.textContent = score;
 }
 
 // function finalResultsScreen() {
