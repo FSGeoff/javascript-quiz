@@ -11,6 +11,7 @@ var clearScoresButton = document.getElementById("clear-scores");
 var finalResultsBox = document.getElementById("results-box");
 var initialsInput = document.getElementById("initials-input");
 var submitButton = document.getElementById("submit-btn");
+var highScoresPage = document.getElementById("high-scores");
 
 var finalResults = [];
 var count = 75;
@@ -230,8 +231,16 @@ function yourScore() {
 	}
 	finalScore.textContent = score;
 
-	submitButton.addEventListener("click", function () {});
+	submitButton.addEventListener("click", function () {
+		finalResultsBox.style.display = "none";
+		highScoresPage.style.display = "block";
+		highScoresPage.style.margin = "auto";
+
+		highScores();
+	});
 }
+
+function highScores() {}
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
