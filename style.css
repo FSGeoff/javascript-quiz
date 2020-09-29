@@ -27,12 +27,12 @@
 }
 
 #start-btn {
-	background-color: blueviolet;
+	background-color: #c549c5;
 	position: block;
 	margin: auto;
 }
 
-#resultsBox {
+#results-box {
 	display: none;
 }
 
@@ -47,4 +47,8 @@
 #answer-message {
 	position: block;
 	margin: auto;
+}
+
+.results {
+	display: none;
 }

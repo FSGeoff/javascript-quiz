@@ -8,6 +8,8 @@ var answerMessage = document.getElementById("answer-message");
 var finalScore = document.getElementById("final-score");
 var goBackButton = document.getElementById("go-back");
 var clearScoresButton = document.getElementById("clear-scores");
+var finalResultsBox = document.getElementById("results-box");
+var initialsInput = document.getElementById("initials-input");
 
 var finalResults = [];
 var count = 75;
@@ -52,7 +54,7 @@ function quizQuestion1() {
 
 		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "purple";
+		testButtons.style.backgroundColor = "#c549c5";
 		testButtons.style.color = "white";
 		testButtons.textContent = question1Answers[i];
 		testBox.append(testButtons);
@@ -94,7 +96,7 @@ function quizQuestion2() {
 
 		testButtons.setAttribute("data-value", question2Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "purple";
+		testButtons.style.backgroundColor = "#c549c5";
 		testButtons.style.color = "white";
 		testButtons.textContent = question2Answers[i];
 		testBox.append(testButtons);
@@ -137,7 +139,7 @@ function quizQuestion3() {
 
 		testButtons.setAttribute("data-value", question3Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "purple";
+		testButtons.style.backgroundColor = "#c549c5";
 		testButtons.style.color = "white";
 		testButtons.textContent = question3Answers[i];
 		testBox.append(testButtons);
@@ -183,7 +185,7 @@ function quizQuestion4() {
 
 		testButtons.setAttribute("data-value", question4Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "purple";
+		testButtons.style.backgroundColor = "#c549c5";
 		testButtons.style.color = "white";
 		testButtons.textContent = question4Answers[i];
 		testBox.append(testButtons);
@@ -203,11 +205,16 @@ function quizQuestion4() {
 				answerSelected.innerHTML = "";
 				answerMessage.innerHTML = "";
 				timeKeeper.style.display = "none";
+				finalResultsBox.style.display = "block";
+				finalResultsBox.style.margin = "auto";
 			}, 1000);
 		});
 	}
 }
-console.log(finalResults);
+
+// function finalResultsScreen() {
+// 	finalResultsBox.style.display = "block";
+// 	finalResultsBox.style.margin = "auto";
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
