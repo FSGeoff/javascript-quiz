@@ -27,7 +27,7 @@
 }
 
 #start-btn {
-	background-color: #c549c5;
+	background-color: #772877;
 	position: block;
 	margin: auto;
 }
@@ -54,5 +54,9 @@
 }
 
 #submit-btn {
-	background-color: #c549c5;
+	background-color: #772877;
+}
+
+.score-keep {
+	display: none;
 }

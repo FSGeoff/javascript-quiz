@@ -55,7 +55,7 @@ function quizQuestion1() {
 
 		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "#c549c5";
+		testButtons.style.backgroundColor = "#772877";
 		testButtons.style.color = "white";
 		testButtons.textContent = question1Answers[i];
 		testBox.append(testButtons);
@@ -97,7 +97,7 @@ function quizQuestion2() {
 
 		testButtons.setAttribute("data-value", question2Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "#c549c5";
+		testButtons.style.backgroundColor = "#772877";
 		testButtons.style.color = "white";
 		testButtons.textContent = question2Answers[i];
 		testBox.append(testButtons);
@@ -140,7 +140,7 @@ function quizQuestion3() {
 
 		testButtons.setAttribute("data-value", question3Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "#c549c5";
+		testButtons.style.backgroundColor = "#772877";
 		testButtons.style.color = "white";
 		testButtons.textContent = question3Answers[i];
 		testBox.append(testButtons);
@@ -186,7 +186,7 @@ function quizQuestion4() {
 
 		testButtons.setAttribute("data-value", question4Answers[i]);
 		testButtons.style.margin = "2px";
-		testButtons.style.backgroundColor = "#c549c5";
+		testButtons.style.backgroundColor = "#772877";
 		testButtons.style.color = "white";
 		testButtons.textContent = question4Answers[i];
 		testBox.append(testButtons);
