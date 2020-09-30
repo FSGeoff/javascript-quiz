@@ -249,6 +249,10 @@ function yourScore() {
 		highScores();
 		// scoreCard();
 	});
+	clearScoresButton.addEventListener("click", function () {
+		event.preventDefault();
+		initialsDisplay.value = "";
+	});
 }
 
 function highScores() {
