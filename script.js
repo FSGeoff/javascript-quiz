@@ -19,6 +19,7 @@ localStorage.getItem("score");
 
 var finalResults = [];
 var count = 75;
+var score = 0;
 var timeInterval;
 var rightAnswers = [
 	"3. alert",
@@ -241,6 +242,7 @@ function yourScore() {
 		finalResultsBox.style.display = "none";
 		highScoresPage.style.display = "block";
 		highScoresPage.style.margin = "auto";
+		initialsDisplay.value = initialsInput.value + " -" + score;
 
 		localStorage.setItem("score", score);
 
@@ -254,7 +256,7 @@ function highScores() {
 	goBackButton.addEventListener("click", function (event) {
 		if (event.target.matches("button")) {
 			event.preventDefault();
-			initialsDisplay.value = score;
+			// initialsDisplay.value = score;
 			beginTest();
 		}
 	});
