@@ -91,6 +91,8 @@ function quizQuestion1() {
 			}, 1000);
 		});
 	}
+	var hdRow = document.createElement("hr");
+	question1.append(hdRow);
 }
 
 function quizQuestion2() {
@@ -134,6 +136,8 @@ function quizQuestion2() {
 			}, 1000);
 		});
 	}
+	var hdRow = document.createElement("hr");
+	question2.append(hdRow);
 }
 
 function quizQuestion3() {
@@ -177,6 +181,8 @@ function quizQuestion3() {
 			}, 1000);
 		});
 	}
+	var hdRow = document.createElement("hr");
+	question3.append(hdRow);
 }
 
 function quizQuestion4() {
@@ -224,6 +230,8 @@ function quizQuestion4() {
 			}, 1000);
 		});
 	}
+	var hdRow = document.createElement("hr");
+	question4.append(hdRow);
 }
 
 function yourScore() {
