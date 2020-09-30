@@ -30,6 +30,7 @@ var rightAnswers = [
 function beginTest() {
 	startButton.addEventListener("click", function () {
 		firstPage.style.display = "none";
+		event.preventDefault();
 		timer();
 	});
 }
@@ -60,6 +61,9 @@ function quizQuestion1() {
 	for (let i = 0; i < question1Answers.length; i++) {
 		var testButtons = document.createElement("button");
 
+		var separator = document.createElement("hr");
+		testButtons.append(separator);
+
 		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
 		testButtons.style.backgroundColor = "#772877";
@@ -70,6 +74,7 @@ function quizQuestion1() {
 			if (event.target.matches("button")) {
 				var answerSelected = event.target.getAttribute("data-value");
 				finalResults.push(answerSelected);
+				event.preventDefault();
 			}
 			if (answerSelected === question1Answers[2]) {
 				answerMessage.innerHTML = "CORRECT!";
@@ -254,8 +259,6 @@ function yourScore() {
 	});
 }
 
-// goBackButton.addEventListener("click", beginTest());
-
 function startOver() {
 	goBackButton.addEventListener("click", function () {
 		event.preventDefault();
@@ -263,4 +266,3 @@ function startOver() {
 	});
 }
 beginTest();
-function scoreCard() {}
