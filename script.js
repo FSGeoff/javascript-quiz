@@ -246,8 +246,7 @@ function yourScore() {
 
 		localStorage.setItem("score", score);
 
-		highScores();
-		// scoreCard();
+		startOver();
 	});
 	clearScoresButton.addEventListener("click", function () {
 		event.preventDefault();
@@ -255,16 +254,13 @@ function yourScore() {
 	});
 }
 
-function highScores() {
-	console.log("High scores here");
-	goBackButton.addEventListener("click", function (event) {
-		if (event.target.matches("button")) {
-			event.preventDefault();
-			// initialsDisplay.value = score;
-			beginTest();
-		}
+// goBackButton.addEventListener("click", beginTest());
+
+function startOver() {
+	goBackButton.addEventListener("click", function () {
+		event.preventDefault();
+		window.location.href = window.location.href;
 	});
 }
 beginTest();
-
 function scoreCard() {}
