@@ -18,7 +18,7 @@ var goBackButton = document.getElementById("go-back");
 localStorage.getItem("score");
 
 var finalResults = [];
-var count = 75;
+var count = 5;
 var score = 0;
 var timeInterval;
 var rightAnswers = [
@@ -40,7 +40,8 @@ function timer() {
 		count--;
 		timeKeeper.textContent = count;
 		console.log(count);
-		if (count === 0) {
+		if (count <= 0) {
+			yourScore();
 			clearInterval(timeInterval);
 		}
 	}, 1000);
