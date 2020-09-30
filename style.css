@@ -60,3 +60,13 @@
 .score-keep {
 	display: none;
 }
+
+#go-back {
+	background-color: #772877;
+	color: cornsilk;
+}
+
+#clear-scores {
+	background-color: #772877;
+	color: cornsilk;
+}

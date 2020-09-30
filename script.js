@@ -12,6 +12,10 @@ var finalResultsBox = document.getElementById("results-box");
 var initialsInput = document.getElementById("initials-input");
 var submitButton = document.getElementById("submit-btn");
 var highScoresPage = document.getElementById("high-scores");
+var initialsDisplay = document.getElementById("initials-display");
+var goBackButton = document.getElementById("go-back");
+
+localStorage.getItem("score");
 
 var finalResults = [];
 var count = 75;
@@ -22,11 +26,12 @@ var rightAnswers = [
 	"4. all of the above",
 	"3. quotes",
 ];
-
-startButton.addEventListener("click", function () {
-	firstPage.style.display = "none";
-	timer();
-});
+function beginTest() {
+	startButton.addEventListener("click", function () {
+		firstPage.style.display = "none";
+		timer();
+	});
+}
 
 function timer() {
 	timeInterval = setInterval(function () {
@@ -232,15 +237,31 @@ function yourScore() {
 	finalScore.textContent = score;
 
 	submitButton.addEventListener("click", function () {
+		event.preventDefault();
 		finalResultsBox.style.display = "none";
 		highScoresPage.style.display = "block";
 		highScoresPage.style.margin = "auto";
 
+		localStorage.setItem("score", score);
+
 		highScores();
+		// scoreCard();
 	});
 }
 
-function highScores() {}
+function highScores() {
+	console.log("High scores here");
+	goBackButton.addEventListener("click", function (event) {
+		if (event.target.matches("button")) {
+			event.preventDefault();
+			initialsDisplay.value = score;
+			beginTest();
+		}
+	});
+}
+beginTest();
+
+function scoreCard() {}
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
