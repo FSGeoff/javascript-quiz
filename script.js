@@ -18,15 +18,17 @@ var goBackButton = document.getElementById("go-back");
 localStorage.getItem("score");
 
 var finalResults = [];
-var count = 5;
+var count = 60;
 var score = 0;
 var timeInterval;
+// Answer key for the test
 var rightAnswers = [
 	"3. alert",
 	"4. console.log",
 	"4. all of the above",
 	"3. quotes",
 ];
+// Beginning of test
 function beginTest() {
 	startButton.addEventListener("click", function () {
 		firstPage.style.display = "none";
@@ -34,20 +36,22 @@ function beginTest() {
 		timer();
 	});
 }
-
+// Timer
 function timer() {
 	timeInterval = setInterval(function () {
 		count--;
+		score = count;
 		timeKeeper.textContent = count;
 		console.log(count);
 		if (count <= 0) {
-			yourScore();
 			clearInterval(timeInterval);
+			score = 0;
+			yourScore();
 		}
 	}, 1000);
 	quizQuestion1();
 }
-
+// Quiz Question 1
 function quizQuestion1() {
 	var question1Answers = [
 		"1. strings",
@@ -55,6 +59,7 @@ function quizQuestion1() {
 		"3. alert",
 		"4. numbers",
 	];
+	// Creates text for question
 	var question1 = document.createElement("h4");
 	question1.textContent = "Commonly used data types DO NOT include:";
 	testBox.append(question1);
@@ -64,7 +69,7 @@ function quizQuestion1() {
 
 		var separator = document.createElement("hr");
 		testButtons.append(separator);
-
+		// Creates buttons
 		testButtons.setAttribute("data-value", question1Answers[i]);
 		testButtons.style.margin = "2px";
 		testButtons.style.backgroundColor = "#772877";
@@ -83,6 +88,7 @@ function quizQuestion1() {
 				answerMessage.innerHTML = "WRONG!";
 				count = count - 10;
 			}
+			// Clears and goes to next function
 			setTimeout(function () {
 				testBox.textContent = "";
 				testButtons.textContent = "";
@@ -227,6 +233,7 @@ function quizQuestion4() {
 				timeKeeper.style.display = "none";
 				finalResultsBox.style.display = "block";
 				finalResultsBox.style.margin = "auto";
+				// goes to score screen after final question
 				yourScore();
 			}, 1000);
 		});
@@ -234,8 +241,9 @@ function quizQuestion4() {
 	var hdRow = document.createElement("hr");
 	question4.append(hdRow);
 }
-
+// Calculates score
 function yourScore() {
+	console.log("I hear you timer");
 	var score = 0;
 	if (finalResults[0] === rightAnswers[0]) {
 		score++;
@@ -249,14 +257,15 @@ function yourScore() {
 	if (finalResults[3] === rightAnswers[3]) {
 		score++;
 	}
+	// Show Final Scores
 	finalScore.textContent = score;
-
+	pScore = score * 25;
 	submitButton.addEventListener("click", function () {
 		event.preventDefault();
 		finalResultsBox.style.display = "none";
 		highScoresPage.style.display = "block";
 		highScoresPage.style.margin = "auto";
-		initialsDisplay.value = initialsInput.value + " -" + score;
+		initialsDisplay.value = initialsInput.value + " -" + pScore + "%";
 
 		localStorage.setItem("score", score);
 
